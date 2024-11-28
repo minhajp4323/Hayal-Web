@@ -11,7 +11,7 @@ function CountrySwitcher() {
     <div className="flex cursor-pointer bg-[#F8F8F8] rounded-full p-1">
       <p
         onClick={() => handleSwitch("IND")}
-        className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-200 ${
+        className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-300 ease-in-out ${
           selectedCountry === "IND"
             ? "bg-white text-black shadow-sm"
             : "bg-transparent text-gray-600"
@@ -21,7 +21,7 @@ function CountrySwitcher() {
       </p>
       <p
         onClick={() => handleSwitch("UAE")}
-        className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-200 ${
+        className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-300 ease-in-out ${
           selectedCountry === "UAE"
             ? "bg-white text-black shadow-sm"
             : "bg-transparent text-gray-600"

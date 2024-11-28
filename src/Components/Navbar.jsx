@@ -5,6 +5,7 @@ import Holidays from "../assets/Navbar/Holidays.svg";
 import Services from "../assets/Navbar/Services.svg";
 import Contact from "../assets/Navbar/Contact.svg";
 import CountrySwitcher from "./CountrySwitcher";
+import BlogIcon from "../assets/Navbar/Blog.svg"
 
 function Navbar() {
   return (
@@ -36,13 +37,11 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="flex gap-5 mr-6">
+      <div className="flex gap-5 mr-6 items-center">
         <div>13:45:03</div>
-        {/* <div className="flex cursor-pointer  bg-[#F8F8F8]">
-          <p className="border-2 rounded-2xl p-1 px-3">IND</p>
-          <p className="border-2 rounded-2xl p-1 px-3">UAE</p>
-        </div> */}
+       
         <CountrySwitcher/>
+        <div className="cursor-pointer bg-[#F8F8F8] rounded-full p-2 px-4"><img src={BlogIcon} alt="" /></div>
       </div>
     </div>
   );

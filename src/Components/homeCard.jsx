@@ -39,22 +39,19 @@ function HomeCard() {
               className="border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center"
               style={{ borderColor: commonColor, color: commonColor }}
             >
-              &#8592; {/* Left Arrow */}
+              &#8592; 
             </button>
             <button
               onClick={handleNext}
               className="border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center"
               style={{ borderColor: commonColor, color: commonColor }}
             >
-              &#8594; {/* Right Arrow */}
+              &#8594; 
             </button>
           </div>
 
-          {/* Text Container with Increased Height */}
           <div className="relative mt-[25px] h-[100px] overflow-hidden">
             {" "}
-            {/* Increased height here */}
-            {/* Apply transition to each content */}
             {contents.map((text, index) => (
               <p
                 key={index}
@@ -73,7 +70,6 @@ function HomeCard() {
             ))}
           </div>
 
-          {/* Dynamic Border Divs with Smooth Moving Transition */}
           <div className="flex items-center mt-4">
             {contents.map((_, index) => (
               <div
@@ -83,9 +79,9 @@ function HomeCard() {
                   borderBottom: `2px solid ${
                     index === currentIndex ? "black" : "#E8E8E8"
                   }`,
-                  width: index === currentIndex ? "100%" : "0%", // Make the active border span full width
+                  width: index === currentIndex ? "100%" : "0%", 
                   transition:
-                    "width 0.3s ease-in-out, border-color 0.3s ease-in-out", // Animate both width and color
+                    "width 0.3s ease-in-out, border-color 0.3s ease-in-out", 
                 }}
               ></div>
             ))}
