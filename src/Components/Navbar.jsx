@@ -1,5 +1,5 @@
 import  { useState, useEffect } from "react";
-import Logo from "../assets/Logo2.svg";
+import Logo from "../assets/Navbar/logo2.svg";
 import Home from "../assets/Navbar/Home.svg";
 import About from "../assets/Navbar/About.svg";
 import Holidays from "../assets/Navbar/Holidays.svg";
@@ -35,7 +35,8 @@ function Navbar() {
     <div className="bg-white rounded-[20px] h-[67px] flex items-center justify-between px-8 mx-[60px]">
       <div className="flex gap-8 justify-between">
         <div>
-          <img src={Logo} alt="Company Logo" className="w-32 h-auto" />
+        <img src={Logo} alt="Company Logo" className="w-32 h-auto" />
+
         </div>
         <div className="flex gap-8">
           <div className="flex gap-2">
