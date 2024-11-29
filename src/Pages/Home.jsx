@@ -56,7 +56,7 @@ function Home() {
       {/* Contact */}
       <div className="flex flex-row md:flex-row lg:flex-row sm:flex-col xs:flex-col mt-[108px] mx-4 sm:mx-20">
         {/* Left Section */}
-        <div className="flex mx-0 sm:mx-20 h-auto sm:h-[305px] xs:w-full">
+        <div className="flex mx-0 sm:mx-0 h-auto sm:h-[305px] xs:w-full">
           <div className="flex flex-col justify-between w-[50%] sm:w-[50%]">
             <p className="text-[30px] md:text-[40px] sm:text-[25px]">
               Let’s Plan Your <br />

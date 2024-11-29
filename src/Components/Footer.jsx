@@ -27,16 +27,20 @@ function Footer() {
           </div>
           <div className="flex justify-center lg:justify-start text-[16px] md:text-[18px] lg:text-[20px] gap-5 lg:gap-28">
             <ul className="space-y-2">
-              <li>Home</li>
-              <li>About</li>
-              <li>Holidays</li>
-              <li>Services</li>
-              <li>Contact</li>
+              <u>
+                <li>Home</li>
+                <li>About</li>
+                <li>Holidays</li>
+                <li>Services</li>
+                <li>Contact</li>
+              </u>
             </ul>
             <ul className="space-y-2">
-              <li>Instagram</li>
-              <li>Facebook</li>
-              <li>Linkedin</li>
+              <u>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Linkedin</li>
+              </u>
             </ul>
           </div>
         </div>

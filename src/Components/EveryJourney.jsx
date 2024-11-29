@@ -63,7 +63,7 @@ function EveryJourney() {
   ];
 
   return (
-    <div className="mx-20">
+    <div className="mx-20 ">
       <div>
         <div className="w-[50%] flex items-center justify-between">
           <div className="every text-[50px]">
@@ -109,7 +109,7 @@ function EveryJourney() {
             nextEl: "#nextArrow",
           }}
           modules={[Navigation]}
-          className="my-8"
+          className="my-8 -mt-16"
           onReachBeginning={() => setIsPrevDisabled(true)}
           onReachEnd={() => setIsNextDisabled(true)}
           onFromEdge={() => {
@@ -119,7 +119,7 @@ function EveryJourney() {
         >
           {destinations.map((destination, index) => (
            <SwiperSlide key={index}>
-           <div className="flex flex-col items-center gap-4">
+           <div className="flex flex-col items-center gap-4 ">
              <div
                className={`w-[320px] h-[320px] rounded-[20px] bg-cover bg-center p-11 text-white flex ${
                  index % 2 === 0 ? "items-start" : "items-end"
