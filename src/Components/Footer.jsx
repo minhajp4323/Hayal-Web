@@ -1,4 +1,4 @@
-import Logo from "../assets/logo2.svg";
+import Logo from '../assets/Navbar/logo2.svg'
 import footerBg from "../assets/Footer/FooterBG.png";
 import message from "../assets/Footer/MessageICon.png";
 import Call from "../assets/Footer/CallIcon.png";
