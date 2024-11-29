@@ -54,34 +54,35 @@ function Home() {
         <Testimonial />
       </div>
       {/* Contact */}
-      <div className="flex flex-wrap mt-[108px]">
+      <div className="flex flex-row md:flex-row lg:flex-row sm:flex-col xs:flex-col mt-[108px] mx-4 sm:mx-20">
         {/* Left Section */}
-        <div className="flex flex-col sm:flex-row sm:mx-20 h-auto sm:h-[305px] w-full sm:w-auto">
-          <div className="flex flex-col justify-between sm:h-full w-full sm:w-[50%]">
-            <p className="text-[50px]">
-              Let`s Plan Your <br />
+        <div className="flex mx-0 sm:mx-20 h-auto sm:h-[305px] xs:w-full">
+          <div className="flex flex-col justify-between w-[50%] sm:w-[50%]">
+            <p className="text-[30px] md:text-[40px] sm:text-[25px]">
+              Let’s Plan Your <br />
               Dream Trip!
             </p>
-            <button className="bg-[#FBB800] w-[322px] h-[62px] rounded-[15px] mt-7 text-white">
+            {/* First Enquire Button (visible on larger screens only) */}
+            <button className="bg-[#FBB800] w-[322px] h-[62px] rounded-[15px] mt-7 text-white sm:block md:block lg:block xl:block hidden">
               ENQUIRE
             </button>
           </div>
 
-          <div className="w-full sm:w-[50%]">
+          <div className="">
             <img
               src={LetsPlan}
               alt=""
-              className="h-auto sm:h-[305px] w-full object-contain"
+              className="h-auto sm:h-[205px] md:h-[305px] lg:h-[305px] xs:h-[205px] w-full object-contain"
             />
           </div>
         </div>
 
         {/* Contact Form Section */}
-        <div className="w-full max-w-[674px] mx-auto mt-6 sm:mt-0 sm:mx-8">
+        <div className="w-full max-w-[674px] mx-auto mt-6 sm:mt-0 sm:mx-8 ">
           <div className="flex flex-col">
             {/* Destination Dropdown */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="Destination" className="text-lg font-semibold">
+              <label htmlFor="Destination" className="text-[lg] font-semibold">
                 DESTINATION
               </label>
               <select
@@ -99,7 +100,7 @@ function Home() {
 
             {/* Traveller and Date */}
             <div className="flex flex-col sm:flex-row sm:gap-[30px] mb-4">
-              <div className="flex flex-col sm:w-[48%]">
+              <div className="flex flex-col sm:w-[%]">
                 <label htmlFor="Traveller" className="text-lg font-semibold">
                   TRAVELLER
                 </label>
@@ -123,7 +124,7 @@ function Home() {
                 </label>
                 <input
                   type="date"
-                  className="bg-[#22BCD3] p-[15px] rounded-[15px] h-[62px] w-full placeholder-white text-white"
+                  className="bg-[#22BCD3] p-[15px] rounded-[15px] h-[62px] w-full lg:w-full placeholder-white text-white"
                 />
               </div>
             </div>
@@ -154,11 +155,16 @@ function Home() {
                   <input
                     type="number"
                     placeholder="Phone Number"
-                    className="bg-[#22BCD3] p-[15px] rounded-[15px] h-[62px] w-full sm:w-[182px] placeholder-white text-white"
+                    className="bg-[#22BCD3] p-[15px] rounded-[15px] h-[62px] w-full sm:w-full placeholder-white text-white"
                   />
                 </div>
               </div>
             </div>
+
+            {/* Second Enquire Button (visible on smaller screens only) */}
+            <button className="bg-[#FBB800] w-full h-[62px] rounded-[15px] mt-7 text-white sm:block lg:hidden">
+              ENQUIRE
+            </button>
           </div>
         </div>
       </div>
