@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Boy from "../../assets/Home/BoyIcon.png";
 import TestimonialImg from "../../assets/Home/TestimonialImg.png";
+import TestimonialIcon from "../../assets/Home/TestimonialIcon.png";
 import { FaStar } from "react-icons/fa";
 
 function Testimonial() {
@@ -79,13 +79,13 @@ function Testimonial() {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 -mt-20">
+        <div className="flex items-center gap-2 -mt-20 mr-16">
           <hr className="flex-grow border-t border-gray-300" />
-          <img src={Boy} alt="" className="h-[215px]" />
+          <img src={TestimonialIcon} alt="" className="h-[215px]" />
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-0 justify-items-center items-center">
+      <div className="grid grid-cols-2 gap-0 justify-items-center items-center -mt-14 ml-20">
         <div
           className={`flex justify-center items-center relative ml-[10%] transition-transform duration-500 ${
             isAnimating ? "-translate-x-[100%]" : ""
@@ -115,7 +115,7 @@ function Testimonial() {
         </div>
 
         <div
-          className={`flex justify-center items-center relative transition-transform duration-500 ${
+          className={`flex justify-center items-center relative transition-transform duration-500 ml-44 ${
             isAnimating ? "-translate-x-[100%]" : ""
           }`}
         >

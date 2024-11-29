@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function CountrySwitcher() {
   const [selectedCountry, setSelectedCountry] = useState("IND");

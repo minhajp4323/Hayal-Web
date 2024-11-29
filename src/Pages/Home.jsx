@@ -77,7 +77,7 @@ function Home() {
         </div>
 
         {/* Contact Form Section */}
-        <div className="w-full max-w-[674px] mx-auto mt-6 sm:mt-0">
+        <div className="w-full max-w-[674px] mx-auto mt-6 sm:mt-0 sm:mx-8">
           <div className="flex flex-col">
             {/* Destination Dropdown */}
             <div className="flex flex-col mb-4">
