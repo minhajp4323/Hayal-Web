@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../assets/Navbar/logo2.svg";
 import Home from "../assets/Navbar/Home.svg";
 import About from "../assets/Navbar/About.svg";
@@ -7,11 +7,12 @@ import Services from "../assets/Navbar/Services.svg";
 import Contact from "../assets/Navbar/Contact.svg";
 import CountrySwitcher from "./CountrySwitcher";
 import BlogIcon from "../assets/Navbar/Blog.svg";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
+  const nav = useNavigate();
 
-  // Update time every second
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -21,13 +22,10 @@ function Navbar() {
       setCurrentTime(`${hours}:${minutes}:${seconds}`);
     };
 
-    // Set initial time
     updateTime();
 
-    // Update time every second
     const interval = setInterval(updateTime, 1000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
@@ -35,15 +33,14 @@ function Navbar() {
     <div className="bg-white rounded-[20px] h-[67px] flex items-center justify-between px-8 mx-[60px]">
       <div className="flex gap-8 justify-between">
         <div>
-        <img src={Logo} alt="Company Logo" className="w-32 h-auto" />
-
+          <img src={Logo} alt="Company Logo" className="w-32 h-auto" />
         </div>
         <div className="flex gap-8">
-          <div className="flex gap-2">
+          <div className="flex gap-2" onClick={() => nav("/")}>
             <img src={Home} alt="" className="h-[20px]" />
             HOME
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2" onClick={() => nav("/About")}>
             <img src={About} alt="" className="h-[20px]" />
             ABOUT
           </div>

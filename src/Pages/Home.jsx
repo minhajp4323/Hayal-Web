@@ -7,10 +7,15 @@ import WhyChoose from "../Components/HomeComponent/WhyChoose";
 import Testimonial from "../Components/HomeComponent/Testimonial";
 import LetsPlan from "../assets/Home/LetsPlan.png";
 import Gallery from "../Components/HomeComponent/Gallery";
+import Navbar from "../Components/Navbar";
 
 function Home() {
   return (
     <div>
+      <div className="pt-[50px]">
+        <Navbar />
+      </div>
+
       <div className="flex justify-center mt-[34px] text-white">
         <div className="">
           <img
