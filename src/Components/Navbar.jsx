@@ -7,11 +7,13 @@ import Services from "../assets/Navbar/Services.svg";
 import Contact from "../assets/Navbar/Contact.svg";
 import CountrySwitcher from "./CountrySwitcher";
 import BlogIcon from "../assets/Navbar/Blog.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import HolidayNav from "./NavbarComponet/HolidayNav";
 
 function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
   const nav = useNavigate();
+  const location = useLocation(); 
 
   useEffect(() => {
     const updateTime = () => {
@@ -37,23 +39,35 @@ function Navbar() {
         </div>
         <div className="flex gap-8">
           <div className="flex gap-2" onClick={() => nav("/")}>
-            <img src={Home} alt="" className="h-[20px]" />
+            {location.pathname === "/" && (
+              <img src={Home} alt="Home" className="h-[20px]" />
+            )}
             HOME
           </div>
           <div className="flex gap-2" onClick={() => nav("/About")}>
-            <img src={About} alt="" className="h-[20px]" />
+            {location.pathname === "/About" && (
+              <img src={About} alt="About" className="h-[20px]" />
+            )}
             ABOUT
           </div>
           <div className="flex gap-2">
-            <img src={Holidays} alt="" className="h-[20px]" />
-            HOLIDAY
+            {location.pathname === "/Holiday" && (
+              <img src={Holidays} alt="Holiday" className="h-[20px]" />
+            )}
+            {/* HOLIDAYS */}
+            <HolidayNav/>
+            
           </div>
-          <div className="flex gap-2">
-            <img src={Services} alt="" className="h-[20px]" />
+          <div className="flex gap-2" onClick={() => nav("/Services")}>
+            {location.pathname === "/Services" && (
+              <img src={Services} alt="Services" className="h-[20px]" />
+            )}
             SERVICES
           </div>
-          <div className="flex gap-2">
-            <img src={Contact} alt="" className="h-[20px]" />
+          <div className="flex gap-2" onClick={() => nav("/Contact")}>
+            {location.pathname === "/Contact" && (
+              <img src={Contact} alt="Contact" className="h-[20px]" />
+            )}
             CONTACT
           </div>
         </div>
@@ -63,7 +77,7 @@ function Navbar() {
 
         <CountrySwitcher />
         <div className="cursor-pointer bg-[#F8F8F8] rounded-full p-2 px-4">
-          <img src={BlogIcon} alt="" />
+          <img src={BlogIcon} alt="Blog Icon" />
         </div>
       </div>
     </div>
