@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import { IoSunnyOutline } from "react-icons/io5";
 import { HiOutlineMoon } from "react-icons/hi2";
@@ -7,8 +7,12 @@ import TouristBoy from "../assets/Destination/TouristBoy.svg";
 import Banner from "../assets/Destination/Malysia/Packages/Malysia3.png";
 import Malysia1 from "../assets/Destination/Malysia/Packages/Malysia2.png";
 import HomeCard from "../Components/homeCard";
+import Footer from "../Components/Footer";
+import OverViewComponent from "../Components/OverView/OverViewComponent";
+import Itenary from "../Components/OverView/Itenary";
 
 function OverView() {
+  const [activeTab, setActiveTab] = useState("overview"); 
   const packages = [
     {
       title: "Tour to Malaysia with Genting & Kuala Lumpur",
@@ -89,38 +93,54 @@ function OverView() {
               </div>
             </div>
 
-            <div className=" flex flex-col rounded-[25px] bg-white p-[30px] gap-[30px]">
+            <div className="flex flex-col rounded-[25px] bg-white p-[30px] gap-[30px]">
+              {/* Tab buttons */}
               <div className="flex gap-2">
-                <button className="bg-white px-4 py-2 rounded-full border-2 border-black">
+                <button
+                  className={`px-4 py-2 rounded-full border-2 ${
+                    activeTab === "overview"
+                      ? "bg-black text-white"
+                      : "bg-white border-black"
+                  }`}
+                  onClick={() => setActiveTab("overview")}
+                >
                   Overview
                 </button>
-                <button className="bg-white px-4 py-2 rounded-full border-2 border-black">
+                <button
+                  className={`px-4 py-2 rounded-full border-2 ${
+                    activeTab === "itenary"
+                      ? "bg-black text-white"
+                      : "bg-white border-black"
+                  }`}
+                  onClick={() => setActiveTab("itenary")}
+                >
                   Itenary
                 </button>
-                <button className="bg-white px-4 py-2 rounded-full border-2 border-black">
+                <button
+                  className={`px-4 py-2 rounded-full border-2 ${
+                    activeTab === "enquire"
+                      ? "bg-black text-white"
+                      : "bg-white border-black"
+                  }`}
+                  onClick={() => setActiveTab("enquire")}
+                >
                   Enquire
                 </button>
               </div>
+
+              {/* Display the active component */}
               <div>
-                <div className="bg-[#F6FFF9] p-[40px] rounded-[25px] border-[1px]">
-                  <h1>Package Inclusion :</h1>
-                  <ul>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                    <li>Airfare (Kochi – Bangkok –Kochi)</li>
-                  </ul>
-                </div>
+                {activeTab === "overview" && <OverViewComponent />}
+                {activeTab === "itenary" && <Itenary />}
+                {activeTab === "enquire" && (
+                  <div>Enquire Component Goes Here</div>
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
