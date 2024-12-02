@@ -12,6 +12,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/country/:id" element={<CountryPage />} />
         {/* <Route path="/overview" element={<OverView/>} /> */}
+        {/* <Route path="/overview/:id" element={<OverView />} /> */}
+        <Route path="/overview" element={<OverView />} />
       </Routes>
     </div>
   );

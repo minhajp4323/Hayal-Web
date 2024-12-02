@@ -1,16 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import { IoSunnyOutline } from "react-icons/io5";
 import { HiOutlineMoon } from "react-icons/hi2";
-import HomeCard from "../../Components/homeCard";
 import TouristBoy from "../../assets/Destination/TouristBoy.svg";
 import Banner from "../../assets/Destination/Malysia/Malaysia.png";
 import Malysia1 from "../../assets/Destination/Malysia/Packages/Malysia1.png";
 
 function CountryPage() {
+  const nav = useNavigate();
+
   const packages = [
     {
+      id: 1,
       title: "Tour to Malaysia with Genting & Kuala Lumpur",
       cover: Malysia1,
       days: 3,
@@ -19,6 +22,7 @@ function CountryPage() {
       highlights: ["Speed Boat", "Kayaking", "Coral Island"],
     },
     {
+      id: 2,
       title: "Explore Penang and Langkawi Islands",
       cover: Malysia1,
       days: 4,
@@ -27,14 +31,7 @@ function CountryPage() {
       highlights: ["Beaches", "Night Markets", "Cable Car"],
     },
     {
-      title: "Discover Borneo Adventure",
-      cover: Malysia1,
-      days: 5,
-      nights: 5,
-      places: ["Kota Kinabalu", "Mount Kinabalu"],
-      highlights: ["Hiking", "Wildlife Safari", "Rainforest Tour"],
-    },
-    {
+      id: 3,
       title: "Discover Borneo Adventure",
       cover: Malysia1,
       days: 5,
@@ -48,24 +45,21 @@ function CountryPage() {
     <div className="pt-[50px]">
       <Navbar />
       <div className="mt-[40px]">
-        <div className="flex flex-col mx-[60px] ">
+        <div className="flex flex-col mx-[60px]">
           <img
             src={Banner}
             alt="Destination banner"
             className="w-[1392px] h-[369px] rounded-[30px]"
           />
-          <div className="absolute right-[185px] bottom-14">
-            <HomeCard />
-          </div>
         </div>
       </div>
-      <div className="px-[180px] flex flex-col gap-[50px] ">
+      <div className="px-[180px] flex flex-col gap-[50px]">
         <div className="flex flex-col gap-4 mt-11">
           <div className="flex bg-white h-[92px] w-[356px] relative rounded-[20px]">
             <img
               src={TouristBoy}
               alt="boy"
-              className="h-[130px] absolute bottom-0 left-2 "
+              className="h-[130px] absolute bottom-0 left-2"
             />
             <div className="ml-[150px] mt-3">
               <p className="text-[16px]">Selected Destination: </p>
@@ -79,8 +73,8 @@ function CountryPage() {
             </p>
           </div>
         </div>
-        {packages.map((pkg, index) => (
-          <div className="flex w-[1142px] justify-between" key={index}>
+        {packages.map((pkg) => (
+          <div className="flex w-[1142px] justify-between" key={pkg.id}>
             <div>
               <img
                 src={pkg.cover}
@@ -124,7 +118,11 @@ function CountryPage() {
                   ))}
                 </div>
               </div>
-              <div className="bg-[#47BCCB] rounded-full flex justify-center items-center h-[51px] w-[126px] text-[15px] font-bold text-white cursor-pointer mt-3">
+              <div
+                // onClick={() => nav(`/overview/${pkg.id}`)}
+                onClick={() => nav(`/overview`)}
+                className="bg-[#47BCCB] rounded-full flex justify-center items-center h-[51px] w-[126px] text-[15px] font-bold text-white cursor-pointer mt-3"
+              >
                 VIEW DEAL
               </div>
             </div>
