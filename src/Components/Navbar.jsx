@@ -54,7 +54,6 @@ function Navbar() {
             {location.pathname === "/Holiday" && (
               <img src={Holidays} alt="Holiday" className="h-[20px]" />
             )}
-            {/* HOLIDAYS */}
             <HolidayNav/>
             
           </div>

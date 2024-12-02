@@ -8,6 +8,7 @@ import Testimonial from "../Components/HomeComponent/Testimonial";
 import LetsPlan from "../assets/Home/LetsPlan.png";
 import Gallery from "../Components/HomeComponent/Gallery";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
@@ -176,6 +177,9 @@ function Home() {
 
       <div>
         <Gallery />
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
