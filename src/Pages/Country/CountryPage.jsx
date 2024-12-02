@@ -28,7 +28,15 @@ function CountryPage() {
     },
     {
       title: "Discover Borneo Adventure",
-      cover: Malysia1, 
+      cover: Malysia1,
+      days: 5,
+      nights: 5,
+      places: ["Kota Kinabalu", "Mount Kinabalu"],
+      highlights: ["Hiking", "Wildlife Safari", "Rainforest Tour"],
+    },
+    {
+      title: "Discover Borneo Adventure",
+      cover: Malysia1,
       days: 5,
       nights: 5,
       places: ["Kota Kinabalu", "Mount Kinabalu"],
@@ -57,9 +65,9 @@ function CountryPage() {
             <img
               src={TouristBoy}
               alt="boy"
-              className="h-[130px] absolute bottom-0 left-0"
+              className="h-[130px] absolute bottom-0 left-2 "
             />
-            <div className="ml-[140px]">
+            <div className="ml-[150px] mt-3">
               <p className="text-[16px]">Selected Destination: </p>
               <p className="text-[30px]">Malaysia</p>
             </div>
@@ -80,7 +88,7 @@ function CountryPage() {
                 className="h-[376px] w-[376px] rounded-[25px]"
               />
             </div>
-            <div className="flex flex-col bg-white p-10 rounded-[25px] gap-2 w-[736px] h-[376px]">
+            <div className="flex flex-col bg-white p-8 px-14 rounded-[25px] gap-2 w-[736px] h-[376px]">
               <h1 className="text-[25px] font-bold">{pkg.title}</h1>
               <div className="flex gap-2">
                 <div className="flex gap-2 px-3 py-2 border-[2px] border-black rounded-full items-center">
@@ -93,7 +101,7 @@ function CountryPage() {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="text-[#9C9C9C] text-[16px]">Places Covered</p>
+                <p className="text-[#9C9C9C] text-[16px]">Places Covered :</p>
                 <div className="flex text-[20px] gap-2">
                   {pkg.places.map((place, idx) => (
                     <React.Fragment key={idx}>
@@ -104,7 +112,7 @@ function CountryPage() {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="text-[#9C9C9C] text-[16px]">Highlights:</p>
+                <p className="text-[#9C9C9C] text-[16px]">Highlights :</p>
                 <div className="flex gap-3">
                   {pkg.highlights.map((highlight, idx) => (
                     <div
@@ -116,7 +124,7 @@ function CountryPage() {
                   ))}
                 </div>
               </div>
-              <div className="bg-[#47BCCB] rounded-full flex justify-center items-center h-[51px] w-[126px] text-[15px] font-bold text-white cursor-pointer">
+              <div className="bg-[#47BCCB] rounded-full flex justify-center items-center h-[51px] w-[126px] text-[15px] font-bold text-white cursor-pointer mt-3">
                 VIEW DEAL
               </div>
             </div>

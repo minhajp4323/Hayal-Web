@@ -30,6 +30,7 @@ function HolidayNav() {
     { id: "maldives", name: "Maldives", flag: Maldives },
     { id: "bali", name: "Bali", flag: "../../assets/Navbar/Flags/Bali.png" },
     { id: "thailand", name: "Thailand", flag: "../../assets/Navbar/Flags/Thailand.png" },
+    // Add other countries with unique IDs
   ];
 
   const handleCountryClick = (id) => {

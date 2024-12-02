@@ -1,12 +1,13 @@
 import React from "react";
-import Navbar from "../../Components/Navbar";
-import Footer from "../../Components/Footer";
+// import Navbar from "../../Components/Navbar";
+// import Footer from "../../Components/Footer";
 import { IoSunnyOutline } from "react-icons/io5";
 import { HiOutlineMoon } from "react-icons/hi2";
-import HomeCard from "../../Components/homeCard";
-import TouristBoy from "../../assets/Destination/TouristBoy.svg";
-import Banner from "../../assets/Destination/Malysia/Malaysia.png";
-import Malysia1 from "../../assets/Destination/Malysia/Packages/Malysia1.png";
+// import HomeCard from "../../Components/homeCard";
+import TouristBoy from "../assets/Destination/TouristBoy.svg";
+import Banner from "../assets/Destination/Malysia/Packages/Malysia3.png";
+import Malysia1 from "../assets/Destination/Malysia/Packages/Malysia2.png"
+import HomeCard from "../Components/homeCard";
 
 function OverView() {
   const packages = [
@@ -18,27 +19,11 @@ function OverView() {
       places: ["Kuala Lumpur", "Genting Highlands"],
       highlights: ["Speed Boat", "Kayaking", "Coral Island"],
     },
-    {
-      title: "Explore Penang and Langkawi Islands",
-      cover: Malysia1,
-      days: 4,
-      nights: 4,
-      places: ["Penang", "Langkawi"],
-      highlights: ["Beaches", "Night Markets", "Cable Car"],
-    },
-    {
-      title: "Discover Borneo Adventure",
-      cover: Malysia1, 
-      days: 5,
-      nights: 5,
-      places: ["Kota Kinabalu", "Mount Kinabalu"],
-      highlights: ["Hiking", "Wildlife Safari", "Rainforest Tour"],
-    },
   ];
 
   return (
     <div className="pt-[50px]">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="mt-[40px]">
         <div className="flex flex-col mx-[60px] ">
           <img
@@ -47,7 +32,7 @@ function OverView() {
             className="w-[1392px] h-[369px] rounded-[30px]"
           />
           <div className="absolute right-[185px] bottom-14">
-            <HomeCard />
+            <HomeCard/>
           </div>
         </div>
       </div>
@@ -63,12 +48,6 @@ function OverView() {
               <p className="text-[16px]">Selected Destination: </p>
               <p className="text-[30px]">Malaysia</p>
             </div>
-          </div>
-          <div className="w-[504px]">
-            <p className="text-[21px]">
-              Showing {packages.length} packages for the selected destination.
-              Compare and choose the best for you and your co-travelers.
-            </p>
           </div>
         </div>
         {packages.map((pkg, index) => (
@@ -123,7 +102,7 @@ function OverView() {
           </div>
         ))}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Workspace from "../../assets/About/Workspace.jpg";
 import Parties from "../../assets/About/Parties.jpg";
@@ -63,7 +63,7 @@ function InsideHayal() {
       <div className="mx-24 flex gap-4 justify-center mt-6 overflow-hidden rounded-[20px]">
         {images.map((image, index) => {
           const isFocused = index === focusedIndex;
-          const baseWidth = 160; // Reduced the base width
+          const baseWidth = 160;
           const focusedWidth = 441;
 
           return (
@@ -71,7 +71,7 @@ function InsideHayal() {
               key={index}
               className="h-[635px] flex-shrink-0 relative transition-all duration-300 ease-in-out"
               style={{
-                width: isFocused ? `${focusedWidth}px` : `${baseWidth}px`, // Apply dynamic width via inline style
+                width: isFocused ? `${focusedWidth}px` : `${baseWidth}px`,
               }}
             >
               <div className="relative w-full h-full">
