@@ -41,7 +41,6 @@ function Gallery() {
 
   return (
     <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-20 mt-[100px] flex gap-[20px] sm:gap-[30px] md:gap-[40px]">
-      {/* Large image container */}
       <div className="h-[300px] sm:h-[500px] md:h-[691px] lg:h-[691px] w-full sm:w-[500px] md:w-[691px] bg-[#ACEDF6] rounded-[25px] relative overflow-hidden hidden lg:block">
         <img
           src={galleryImages[currentImageIndex].src}
@@ -59,7 +58,7 @@ function Gallery() {
           </p>
           <hr className="mb-[20px] sm:mb-[25px] md:mb-[28px]" />
           <div className="flex justify-start gap-3 sm:gap-4 mb-[20px] sm:mb-[28px]">
-            <button className="border-2 border-black px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center">
+            <button className="border-2  border-black px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center">
               <BiExpandAlt />
             </button>
             <button
@@ -77,7 +76,6 @@ function Gallery() {
           </div>
         </div>
 
-        {/* Thumbnails section */}
         <div className="flex gap-2 sm:gap-3 md:gap-4 w-[280px] xs:w-[66%] ml-0 xs:-ml-[94px] ">
           {upcomingImages.map((image, index) => (
             <img

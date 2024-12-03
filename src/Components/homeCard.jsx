@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function HomeCard() {
   const contents = [
@@ -36,17 +37,19 @@ function HomeCard() {
           <div className="flex justify-end gap-4">
             <button
               onClick={handlePrev}
-              className="border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center"
+              className="border-2 px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center"
               style={{ borderColor: commonColor, color: commonColor }}
             >
-              &#8592; 
+              <FaArrowLeft />
+              
             </button>
             <button
               onClick={handleNext}
-              className="border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center"
+              className="border-2 px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center"
               style={{ borderColor: commonColor, color: commonColor }}
             >
-              &#8594; 
+              <FaArrowRight />
+
             </button>
           </div>
 
@@ -55,7 +58,7 @@ function HomeCard() {
             {contents.map((text, index) => (
               <p
                 key={index}
-                className="text-2xl transition-opacity duration-300 ease-in-out absolute "
+                className="text-2xl transition-opacity duration-300 ease-in-out absolute text-start font-semibold "
                 style={{
                   opacity: currentIndex === index ? 1 : 0,
                   transform: `translateY(${
@@ -79,9 +82,9 @@ function HomeCard() {
                   borderBottom: `2px solid ${
                     index === currentIndex ? "black" : "#E8E8E8"
                   }`,
-                  width: index === currentIndex ? "100%" : "0%", 
+                  width: index === currentIndex ? "100%" : "0%",
                   transition:
-                    "width 0.3s ease-in-out, border-color 0.3s ease-in-out", 
+                    "width 0.3s ease-in-out, border-color 0.3s ease-in-out",
                 }}
               ></div>
             ))}

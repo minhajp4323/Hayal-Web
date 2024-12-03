@@ -3,6 +3,7 @@ import Bali from "../assets/Home/CardImages/Bali.png";
 import Malaysia from "../assets/Home/CardImages/Malaysia.png";
 import Thailand from "../assets/Home/CardImages/Thailand.png";
 import Turkey from "../assets/Home/CardImages/Turkey.png";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -71,7 +72,7 @@ function EveryJourney() {
           </div>
           <div className="btn flex gap-4">
             <button
-              className={`border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center ${
+              className={`border-2 px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center ${
                 isPrevDisabled
                   ? "border-gray-400 text-gray-400"
                   : "border-black text-black"
@@ -79,10 +80,11 @@ function EveryJourney() {
               id="prevArrow"
               disabled={isPrevDisabled}
             >
-              &#8592;
+              <FaArrowLeft />
+
             </button>
             <button
-              className={`border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center ${
+              className={`border-2  px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center ${
                 isNextDisabled
                   ? "border-gray-400 text-gray-400"
                   : "border-black text-black"
@@ -90,7 +92,8 @@ function EveryJourney() {
               id="nextArrow"
               disabled={isNextDisabled}
             >
-              &#8594;
+              <FaArrowRight />
+
             </button>
           </div>
         </div>

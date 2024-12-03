@@ -12,7 +12,7 @@ import OverViewComponent from "../Components/OverView/OverViewComponent";
 import Itenary from "../Components/OverView/Itenary";
 
 function OverView() {
-  const [activeTab, setActiveTab] = useState("overview"); 
+  const [activeTab, setActiveTab] = useState("overview");
   const packages = [
     {
       title: "Tour to Malaysia with Genting & Kuala Lumpur",
@@ -97,9 +97,9 @@ function OverView() {
               {/* Tab buttons */}
               <div className="flex gap-2">
                 <button
-                  className={`px-4 py-2 rounded-full border-2 ${
+                  className={`px-4 py-2 rounded-full border-2 w-[170px] ${
                     activeTab === "overview"
-                      ? "bg-black text-white"
+                      ? "bg-[#FBB800] text-black border-black"
                       : "bg-white border-black"
                   }`}
                   onClick={() => setActiveTab("overview")}
@@ -107,9 +107,9 @@ function OverView() {
                   Overview
                 </button>
                 <button
-                  className={`px-4 py-2 rounded-full border-2 ${
+                  className={`px-4 py-2 rounded-full border-2 w-[170px] ${
                     activeTab === "itenary"
-                      ? "bg-black text-white"
+                      ? "bg-[#FBB800] text-black border-black"
                       : "bg-white border-black"
                   }`}
                   onClick={() => setActiveTab("itenary")}
@@ -117,9 +117,9 @@ function OverView() {
                   Itenary
                 </button>
                 <button
-                  className={`px-4 py-2 rounded-full border-2 ${
+                  className={`px-4 py-2 rounded-full border-2 w-[170px] ${
                     activeTab === "enquire"
-                      ? "bg-black text-white"
+                      ? "bg-[#FBB800] text-black border-black"
                       : "bg-white border-black"
                   }`}
                   onClick={() => setActiveTab("enquire")}
@@ -128,7 +128,6 @@ function OverView() {
                 </button>
               </div>
 
-              {/* Display the active component */}
               <div>
                 {activeTab === "overview" && <OverViewComponent />}
                 {activeTab === "itenary" && <Itenary />}

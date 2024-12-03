@@ -3,7 +3,7 @@ import CycleGirl from "../../assets/Home/CycleGirl.png";
 function WhyChoose() {
   return (
     <div className="flex mx-20 h-screen items-end">
-      <div className="flex text-[23px]">
+      <div className="flex text-[18px]">
         <p>(LEARN MORE ABOUT US)</p>
       </div>
 
@@ -17,7 +17,7 @@ function WhyChoose() {
             <img src={CycleGirl} alt="Cycle Girl" className="w-[281px] " />
           </div>
         </div>
-        <div className="w-[557px] mt-4 text-left text-[23px]">
+        <div className="w-[557px] mt-4 text-left text-[25px]">
           <p>
             At Hayal, we turn your travel dreams into reality with personalized
             packages, exceptional service, and insider knowledge.
@@ -29,7 +29,7 @@ function WhyChoose() {
         </div>
       </div>
 
-      <div className="flex justify-end text-[23px]">
+      <div className="flex justify-end text-[18px]">
         <p>(TRAVELED WITH US? <br /> RATE YOUR EXPERIENCE)</p>
       </div>
     </div>

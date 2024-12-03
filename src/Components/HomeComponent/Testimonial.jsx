@@ -2,6 +2,7 @@ import { useState } from "react";
 import TestimonialImg from "../../assets/Home/TestimonialImg.png";
 import TestimonialIcon from "../../assets/Home/TestimonialIcon.png";
 import { FaStar } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function Testimonial() {
   const testimonials = [
@@ -40,7 +41,7 @@ function Testimonial() {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
       setIsAnimating(false);
-    }, 500); 
+    }, 500);
   };
 
   const handlePrevious = () => {
@@ -51,7 +52,7 @@ function Testimonial() {
         prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
       );
       setIsAnimating(false);
-    }, 500); 
+    }, 500);
   };
 
   return (
@@ -64,17 +65,17 @@ function Testimonial() {
           <div className="btn flex gap-4">
             <button
               onClick={handlePrevious}
-              className="border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center"
+              className="border-2 px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center"
               style={{ borderColor: "black" }}
             >
-              &#8592;
+              <FaArrowLeft />
             </button>
             <button
               onClick={handleNext}
-              className="border-2 px-3 py-1 rounded-full text-sm h-[50px] w-[50px] flex items-center justify-center"
+              className="border-2 px-3 py-1 rounded-full text-sm h-[40px] w-[40px] flex items-center justify-center"
               style={{ borderColor: "black" }}
             >
-              &#8594;
+              <FaArrowRight />
             </button>
           </div>
         </div>
@@ -107,7 +108,9 @@ function Testimonial() {
             <h1 className="text-[20px] font-bold">
               {testimonials[currentIndex].title}
             </h1>
-            <p className="text-[16px] mt-4">{testimonials[currentIndex].description}</p>
+            <p className="text-[16px] mt-4">
+              {testimonials[currentIndex].description}
+            </p>
             <p className="text-[#47BCCB] mt-1">
               <u>Read more +</u>
             </p>
@@ -121,9 +124,7 @@ function Testimonial() {
         >
           <div className="relative">
             <img
-              src={
-                testimonials[(currentIndex + 1) % testimonials.length].image
-              }
+              src={testimonials[(currentIndex + 1) % testimonials.length].image}
               alt="Testimonial"
               className="rounded-[20px] h-[356px] w-[358px] mb-[100px]"
             />
@@ -134,7 +135,10 @@ function Testimonial() {
               {testimonials[(currentIndex + 1) % testimonials.length].title}
             </h1>
             <p className="text-[16px] mt-4">
-              {testimonials[(currentIndex + 1) % testimonials.length].description}
+              {
+                testimonials[(currentIndex + 1) % testimonials.length]
+                  .description
+              }
             </p>
             <p className="text-[#47BCCB] mt-1">
               <u>Read more +</u>

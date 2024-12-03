@@ -13,8 +13,8 @@ import Footer from "../Components/Footer";
 function Home() {
   return (
     <div>
-      <div className="pt-[50px]">
         <Navbar />
+      <div className="pt-[50px]">
       </div>
 
       <div className="flex justify-center mt-[34px] text-white">

@@ -8,7 +8,7 @@ function CountrySwitcher() {
   };
 
   return (
-    <div className="flex cursor-pointer bg-[#F8F8F8] rounded-full p-1">
+    <div className="flex cursor-pointer bg-[#F8F8F8] rounded-full p-2">
       <p
         onClick={() => handleSwitch("IND")}
         className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-300 ease-in-out ${

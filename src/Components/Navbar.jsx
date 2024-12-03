@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Logo from "../assets/Navbar/logo2.svg";
 import Home from "../assets/Navbar/Home.svg";
 import About from "../assets/Navbar/About.svg";
@@ -13,7 +14,7 @@ import HolidayNav from "./NavbarComponet/HolidayNav";
 function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
   const nav = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const updateTime = () => {
@@ -32,8 +33,13 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="bg-white rounded-[20px] h-[67px] flex items-center justify-between px-8 mx-[60px]">
-      <div className="flex gap-8 justify-between">
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white rounded-[20px] h-[67px] flex items-center justify-between px-8 mx-[60px] sticky top-[50px] z-50"
+    >
+      <div className="flex gap-8 justify-between items-end">
         <div>
           <img src={Logo} alt="Company Logo" className="w-32 h-auto" />
         </div>
@@ -54,8 +60,7 @@ function Navbar() {
             {location.pathname === "/Holiday" && (
               <img src={Holidays} alt="Holiday" className="h-[20px]" />
             )}
-            <HolidayNav/>
-            
+            <HolidayNav />
           </div>
           <div className="flex gap-2" onClick={() => nav("/Services")}>
             {location.pathname === "/Services" && (
@@ -75,11 +80,11 @@ function Navbar() {
         <div>{currentTime}</div>
 
         <CountrySwitcher />
-        <div className="cursor-pointer bg-[#F8F8F8] rounded-full p-2 px-4">
+        <div className="cursor-pointer bg-[#F8F8F8] rounded-full p-2 px-4" onClick={() => nav("/Blog")} >
           <img src={BlogIcon} alt="Blog Icon" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
