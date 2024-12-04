@@ -6,8 +6,9 @@ import CountryPage from "./Pages/Country/CountryPage";
 import OverView from "./Pages/OverView";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
-import Navbar from "./Components/Navbar";
+// import Navbar from "./Components/Navbar";
 import Blog from "./Pages/Blog";
+import BlogInnerView from "./Pages/BlogInnerView";
 function App() {
   return (
     <div className="font-mulish bg-[#DFFBFF]">
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Services" element={<Services/>} />
         <Route path="/Contact" element={<Contact/> } />
         <Route path="/Blog" element={<Blog/> } />
+        <Route path="/Blog/View" element={<BlogInnerView/> } />
       </Routes>
     </div>
   );
